@@ -7,6 +7,9 @@ RUN apt-get update -y \
 && apt-get autoremove -y \
 && apt-get autoclean -y
 RUN useradd -m steam
+RUN mkdir /mnt/steam
+RUN chown steam:steam /mnt/steam
+RUN ls -l /mnt
 USER steam
 RUN mkdir ~/steamcmd
 WORKDIR /home/steam/steamcmd
