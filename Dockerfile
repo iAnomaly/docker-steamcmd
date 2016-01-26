@@ -16,5 +16,6 @@ RUN wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 RUN tar -xvzf steamcmd_linux.tar.gz \
 && rm steamcmd_linux.tar.gz
 RUN ./steamcmd.sh +quit 
+VOLUME ["/home/steam"]
 USER root
 
