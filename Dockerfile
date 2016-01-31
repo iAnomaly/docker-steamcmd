@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install -y \
 lib32gcc1 \
 wget
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 RUN useradd -m steam
 RUN mkdir /mnt/steam
 RUN chown steam:steam /mnt/steam
