@@ -1,8 +1,7 @@
 FROM ubuntu
 MAINTAINER Cameron Boulton <https://github.com/iAnomaly>
 
-RUN apt-get update
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
 lib32gcc1 \
 wget
 RUN apt-get upgrade -y

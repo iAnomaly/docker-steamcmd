@@ -1,7 +1,7 @@
 FROM ianomaly/docker-ubuntu-steamcmd
 MAINTAINER Cameron Boulton <https://github.com/iAnomaly>
 
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
 software-properties-common
 RUN dpkg --add-architecture i386 \
 && add-apt-repository ppa:ubuntu-wine/ppa \
