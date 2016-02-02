@@ -3,6 +3,7 @@ MAINTAINER Cameron Boulton <https://github.com/iAnomaly>
 
 RUN useradd -m steam
 RUN apt-get update && apt-get install -y --no-install-recommends \
+ca-certificates \
 lib32gcc1 \
 wget
 RUN apt-get upgrade -y
