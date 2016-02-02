@@ -1,11 +1,11 @@
 FROM ubuntu
 MAINTAINER Cameron Boulton <https://github.com/iAnomaly>
 
-RUN apt-get update && apt-get install -y \
+RUN useradd -m steam
+RUN apt-get update && apt-get install -y --no-install-recommends \
 lib32gcc1 \
 wget
 RUN apt-get upgrade -y
-RUN useradd -m steam
 RUN mkdir /mnt/steam
 RUN chown steam:steam /mnt/steam
 USER steam
