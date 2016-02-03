@@ -10,7 +10,7 @@ docker run -P --name <game> -v <host-dir>:/mnt/steam/<game> ianomaly/docker-ubun
 
 Examples:
 ```
-docker run -P --name space-engineers-server -v /volume1/public/steam/space-engineers-server:/mnt/steam/space-engineers-server ianomaly/docker-ubuntu-steamcmd:space-engineers-server
+docker run -dP --name space-engineers-server -v /volume1/public/steam/space-engineers-server:/mnt/steam/space-engineers-server ianomaly/docker-ubuntu-steamcmd:space-engineers-server
 ```
 
 Currently implemented servers:
