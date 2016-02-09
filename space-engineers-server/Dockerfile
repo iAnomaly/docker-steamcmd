@@ -13,11 +13,12 @@ USER steam
 ENV DISPLAY= WINEDEBUG=-all
 RUN WINEARCH=win32 winecfg \
 && winetricks -q dotnet40
+RUN wine wineboot
 RUN mkdir /mnt/steam/space-engineers-server
 WORKDIR /mnt/steam/space-engineers-server
+RUN ln -s $(readlink -f config) ~/.wine/drive_c/users/steam/Application\ Data/SpaceEngineersDedicated
 USER root
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-EXPOSE 27016
 CMD ["space-engineers-server"]
 
