@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 if [ "$1" = 'space-engineers-server' ]; then
 	[ $(whoami) = root ] && chown -R steam:steam . && su -c "$0 $*" steam
